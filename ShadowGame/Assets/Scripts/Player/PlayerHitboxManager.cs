@@ -10,10 +10,14 @@ public class PlayerHitboxManager : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        // Debug.Log("I got touched by: " + collision.name + " with tag: " + collision.tag);
-        if(collision.CompareTag("Hazard"))
-        {
-            playerHealth.UpdateHealth(-34f);
+        // if(collision.CompareTag("Hazard"))
+        // {
+            
+        // }
+        if(collision.TryGetComponent<ShadowBallBehavior>(out ShadowBallBehavior sbb))
+        {   
+            float dmg = -sbb.DamageDelt;
+            playerHealth.UpdateHealth(dmg);
         }
     }
 }

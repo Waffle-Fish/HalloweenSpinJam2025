@@ -9,21 +9,6 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (takeDamage)
-        {
-            takeDamage = false;
-            TestDamage();
-        }
-    }
-
-    private void TestDamage()
-    {
-        UpdateHealth(-10f);
-    }
     
     public void UpdateHealth(float value)
     {

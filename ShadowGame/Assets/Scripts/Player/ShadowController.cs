@@ -15,7 +15,7 @@ public class ShadowController : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -27,6 +27,7 @@ public class ShadowController : MonoBehaviour
 
         UpdateShadowScale(Vector2.Distance(shadowPivot.transform.position, lightSourceTransform.position));
     }
+    
     void UpdateShadowScale(float dist)
     {
         float exponentVal = exponentCoefficient * dist + horizontalShift;
