@@ -10,10 +10,6 @@ public class PlayerHitboxManager : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        // if(collision.CompareTag("Hazard"))
-        // {
-            
-        // }
         if(collision.TryGetComponent<ShadowBallBehavior>(out ShadowBallBehavior sbb))
         {   
             float dmg = -sbb.DamageDelt;

@@ -9,7 +9,8 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
     }
-    
+
+    // >0 : Heals player | <0 : Hurts player
     public void UpdateHealth(float value)
     {
         currentHealth += value;
