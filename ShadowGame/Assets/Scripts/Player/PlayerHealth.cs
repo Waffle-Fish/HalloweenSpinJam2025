@@ -2,9 +2,17 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public static PlayerHealth Instance { get; private set; }
     [SerializeField] float maxHealth = 100;
     [SerializeField] bool takeDamage = false;
     float currentHealth = 100;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this) Destroy(this); 
+        else Instance = this; 
+    }
+    
     void Start()
     {
         currentHealth = maxHealth;
