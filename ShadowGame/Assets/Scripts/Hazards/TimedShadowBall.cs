@@ -33,6 +33,15 @@ public class TimedShadowBall : ShadowBallBehavior
         timer += Time.fixedDeltaTime;
     }
 
+    protected override void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (disappearAfterTouch && collision.CompareTag("Player"))
+        {
+            Explode();
+            gameObject.SetActive(false);
+        }
+    }
+
     private void Explode()
     {
         if (gameObject && gameObject.activeSelf)

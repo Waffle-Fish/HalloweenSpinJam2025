@@ -4,10 +4,10 @@ public class ShadowBallBehavior : PooledObject_AbstractParentClass, IDamageDeale
 {
     [Tooltip(">0 hurts player\n <0 heals player")]
     [SerializeField] float damageDelt = 0;
-    [SerializeField] bool disappearAfterTouch = false;
+    [SerializeField] protected bool disappearAfterTouch = false;
     public float DamageDelt { get { return damageDelt; } private set { damageDelt = value; } }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (disappearAfterTouch && collision.CompareTag("Player"))
         {
