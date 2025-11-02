@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: f827de23d38da944fa8c1dc73ae58557, type: 2}
+    - target: {fileID: 1419578964703794327, guid: 5e3753dab8a94ec4ba92f9a4c3c1a89a, type: 3}
+      propertyPath: damageDelt
+      value: -25
+      objectReference: {fileID: 0}
     - target: {fileID: 3676727935424378090, guid: 5e3753dab8a94ec4ba92f9a4c3c1a89a, type: 3}
       propertyPath: m_Intensity
       value: 0.6

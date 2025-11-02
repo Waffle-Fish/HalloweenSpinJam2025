@@ -14,6 +14,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField][Range(0f, 1f)] private float sfxVolume = 0.5f;
     private List<AudioSource> sfxAudioSources;
 
+    bool isFirst = true;
+
     private void Awake()
     {
         if (Instance != null && Instance != this) Destroy(this);
@@ -50,17 +52,23 @@ public class AudioManager : MonoBehaviour
     {
         StartCoroutine(FadeOutMusic(music));
     }
-    
+
     IEnumerator FadeOutMusic(AudioClip music)
     {
-        float timer = musicFadeDuration;
-        while (timer > 0)
-        {
-            timer -= Time.fixedDeltaTime;
-            musicAudioSource.volume = Mathf.Clamp(Mathf.Lerp(musicVolume, 0f, timer / musicFadeDuration), 0f, 1f);
-            yield return Time.fixedDeltaTime;
+
+        if (!isFirst) 
+        { 
+            float timer = musicFadeDuration;
+            while (timer > 0)
+            {
+                timer -= Time.fixedDeltaTime;
+                musicAudioSource.volume = Mathf.Clamp(Mathf.Lerp(musicVolume, 0f, timer / musicFadeDuration), 0f, 1f);
+                yield return Time.fixedDeltaTime;
+            }
+            musicAudioSource.Stop();
+            // yield return new WaitForSeconds(0.25f);
         }
-        yield return new WaitForSeconds(0.5f);
+        isFirst = false;
         musicAudioSource.clip = music;
         musicAudioSource.Play();
     }

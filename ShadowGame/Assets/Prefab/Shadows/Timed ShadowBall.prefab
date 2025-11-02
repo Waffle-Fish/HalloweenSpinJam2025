@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e11023a460ae64408e9633849306af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageDelt: 10
+  damageDelt: 50
   disappearAfterTouch: 1
   sfx: {fileID: 0}
   duration: 10
