@@ -10,6 +10,16 @@ public class PlayerHitboxManager : MonoBehaviour
         playerHealth = GetComponentInParent<PlayerHealth>(true);
     }
 
+    private void OnEnable()
+    {
+        EventService.Instance.OnDeath.AddListener(DisableOnDeath);
+    }
+
+    private void OnDisable()
+    {
+        EventService.Instance.OnDeath.RemoveListener(DisableOnDeath);
+    }
+    
     void OnTriggerStay2D(Collider2D collision)
     {
         if (tookDamageRecently) return;
@@ -25,5 +35,10 @@ public class PlayerHitboxManager : MonoBehaviour
     public void SetTookDamageRecentlyToFalse()
     {
         tookDamageRecently = false;
+    }
+
+    private void DisableOnDeath()
+    {
+        this.enabled = false;
     }
 }

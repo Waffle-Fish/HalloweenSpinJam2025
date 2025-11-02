@@ -36,4 +36,9 @@ public class SceneController : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void StopTime()
+    {
+        
+    }
 }

@@ -25,11 +25,13 @@ public class PlayerControls : MonoBehaviour
     private void OnEnable()
     {
         inputSystem.Enable();
+        EventService.Instance.OnDeath.AddListener(DisableOnDeath);
     }
 
     void OnDisable()
     {
         inputSystem.Disable();
+        EventService.Instance.OnDeath.RemoveListener(DisableOnDeath);
     }
 
     void Update()
@@ -37,11 +39,17 @@ public class PlayerControls : MonoBehaviour
         moveDir = inputSystem.Player.Move.ReadValue<Vector2>().normalized;
     }
 
-    private void FixedUpdate() {
+    private void FixedUpdate()
+    {
         animator.SetFloat("XDir", moveDir.x);
         animator.SetFloat("YDir", moveDir.y);
         Vector2 moveVel = moveSpeed * Time.fixedDeltaTime * moveDir;
         Vector2 newPos = (Vector2)transform.position + moveVel;
         rb2D.MovePosition(newPos);
+    }
+    
+    private void DisableOnDeath()
+    {
+        this.enabled = false;
     }
 }
