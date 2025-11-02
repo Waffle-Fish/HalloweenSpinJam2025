@@ -307,7 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   takeDamage: 0
-  deathSFX: {fileID: 0}
+  deathSFX: {fileID: 8300000, guid: d8fdc4acb2d4b85419a424464e4b0bd1, type: 3}
   deathPD: {fileID: 0}
 --- !u!1 &4719252745100014246
 GameObject:
