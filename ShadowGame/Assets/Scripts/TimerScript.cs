@@ -1,9 +1,11 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class TimerScript : MonoBehaviour
 {
+    [SerializeField] PlayableAsset gameTimeline;
     float duration = 600;
     TextMeshProUGUI tmp;
     float timer = 600;
@@ -11,6 +13,8 @@ public class TimerScript : MonoBehaviour
     private void Awake()
     {
         tmp = GetComponent<TextMeshProUGUI>();
+        duration = (float)gameTimeline.duration;
+        timer = duration;
     }
     
     private void Update() {

@@ -22,13 +22,19 @@ public class PlayerHitboxManager : MonoBehaviour
     
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (tookDamageRecently) return;
+        if (tookDamageRecently && !collision.CompareTag("Heal")) return;
         if (collision.TryGetComponent<ShadowBallBehavior>(out ShadowBallBehavior sbb))
         {
+            if (collision.CompareTag("Timed"))
+            {
+                sbb.gameObject.SetActive(false);
+                return;
+            }
             tookDamageRecently = true;
             Invoke(nameof(SetTookDamageRecentlyToFalse), invulnerabilityDuration);
             float dmg = -sbb.DamageDelt;
             playerHealth.UpdateHealth(dmg);
+            if (sbb.DisappearAfterTouch) sbb.gameObject.SetActive(false);
         }
     }
 

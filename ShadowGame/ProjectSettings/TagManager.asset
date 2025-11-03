@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Hazard
   - Environment
+  - Timed
+  - Heal
   layers:
   - Default
   - TransparentFX

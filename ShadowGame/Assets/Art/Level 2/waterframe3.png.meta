@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: e3f508eb63d3ffa45ba0fe53522c7615
+guid: 5ea753fccb51ff14994065e60297fd93
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2127028065239234593
-    second: water frame2_0
+      213: 435657275671849527
+    second: waterframe3_0
   - first:
-      213: 2478003348410125629
-    second: water frame2_1
+      213: 7862362556232687445
+    second: waterframe3_1
   - first:
-      213: -8540398578524446361
-    second: water frame2_2
+      213: 638805413048276243
+    second: waterframe3_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: water frame2_0
+      name: waterframe3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 120
-        width: 1002
-        height: 1028
+        width: 1013
+        height: 1047
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 128fedf71c8b48d10800000000000000
-      internalID: 2127028065239234593
+      spriteID: 73a2c38ebf3cb0600800000000000000
+      internalID: 435657275671849527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water frame2_1
+      name: waterframe3_1
       rect:
         serializedVersion: 2
         x: 337
         y: 0
         width: 4152
-        height: 742
+        height: 759
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d3dc6369ae2a36220800000000000000
-      internalID: 2478003348410125629
+      spriteID: 55fd49b9619bc1d60800000000000000
+      internalID: 7862362556232687445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water frame2_2
+      name: waterframe3_2
       rect:
         serializedVersion: 2
         x: 229
@@ -178,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 761acc6edb86a7980800000000000000
-      internalID: -8540398578524446361
+      spriteID: 315d65d732e7dd800800000000000000
+      internalID: 638805413048276243
       vertices: []
       indices: 
       edges: []
@@ -198,9 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      water frame2_0: 2127028065239234593
-      water frame2_1: 2478003348410125629
-      water frame2_2: -8540398578524446361
+      waterframe3_0: 435657275671849527
+      waterframe3_1: 7862362556232687445
+      waterframe3_2: 638805413048276243
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

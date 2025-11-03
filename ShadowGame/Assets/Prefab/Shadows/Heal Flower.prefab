@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: damageDelt
       value: -25
       objectReference: {fileID: 0}
+    - target: {fileID: 3666578348079845642, guid: 5e3753dab8a94ec4ba92f9a4c3c1a89a, type: 3}
+      propertyPath: m_TagString
+      value: Heal
+      objectReference: {fileID: 0}
     - target: {fileID: 3676727935424378090, guid: 5e3753dab8a94ec4ba92f9a4c3c1a89a, type: 3}
       propertyPath: m_Intensity
       value: 0.6
@@ -131,6 +135,10 @@ PrefabInstance:
     - target: {fileID: 3965288072952258598, guid: 5e3753dab8a94ec4ba92f9a4c3c1a89a, type: 3}
       propertyPath: m_Name
       value: Heal Flower
+      objectReference: {fileID: 0}
+    - target: {fileID: 3965288072952258598, guid: 5e3753dab8a94ec4ba92f9a4c3c1a89a, type: 3}
+      propertyPath: m_TagString
+      value: Heal
       objectReference: {fileID: 0}
     - target: {fileID: 4170835347492123495, guid: 5e3753dab8a94ec4ba92f9a4c3c1a89a, type: 3}
       propertyPath: m_LocalPosition.x

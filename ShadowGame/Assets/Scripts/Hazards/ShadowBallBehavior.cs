@@ -7,13 +7,14 @@ public class ShadowBallBehavior : PooledObject_AbstractParentClass, IDamageDeale
     [SerializeField] protected bool disappearAfterTouch = false;
     [SerializeField] protected AudioClip sfx;
     public float DamageDelt { get { return damageDelt; } private set { damageDelt = value; } }
+    public bool DisappearAfterTouch { get { return disappearAfterTouch; } private set { disappearAfterTouch = value;}}
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (disappearAfterTouch && collision.CompareTag("Player"))
         {
             if (sfx && AudioManager.Instance) AudioManager.Instance.PlaySFX(sfx);
-            gameObject.SetActive(false);
+            // gameObject.SetActive(false);
         }
     }
 }

@@ -37,7 +37,6 @@ public class TimedShadowBall : ShadowBallBehavior
     {
         if (disappearAfterTouch && collision.CompareTag("Player"))
         {
-            Explode();
             gameObject.SetActive(false);
         }
     }

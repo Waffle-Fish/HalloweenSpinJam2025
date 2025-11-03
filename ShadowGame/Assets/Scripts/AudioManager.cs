@@ -41,10 +41,11 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(AudioClip sfx)
     {
         int i = 0;
-        while (sfxAudioSources[i].isPlaying)
+        while (i < sfxAudioSources.Count && sfxAudioSources[i].isPlaying)
         {
             i++;
         }
+        if (i >= sfxAudioSources.Count) i = 0;
         sfxAudioSources[i].PlayOneShot(sfx);
     }
 

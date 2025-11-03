@@ -360,6 +360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Timed ShadowBall
       objectReference: {fileID: 0}
+    - target: {fileID: 4295978856596527965, guid: 0f7e169e4665ae746b105f534121b175, type: 3}
+      propertyPath: m_TagString
+      value: Timed
+      objectReference: {fileID: 0}
     - target: {fileID: 5602518464588694154, guid: 0f7e169e4665ae746b105f534121b175, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -454,7 +458,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

@@ -23,6 +23,7 @@ public class ShadowController : MonoBehaviour
     {
         foreach (var sl_pair in shadows)
         {
+            if (!sl_pair.shadowPivot.gameObject.activeSelf) continue;
             Vector2 lightDir = (sl_pair.shadowPivot.position - sl_pair.lightSourceTransform.position).normalized;
             float lightAngle = Mathf.Atan2(lightDir.y, lightDir.x) * Mathf.Rad2Deg;
             sl_pair.shadowPivot.rotation = Quaternion.Euler(0, 0, lightAngle - 90f);
