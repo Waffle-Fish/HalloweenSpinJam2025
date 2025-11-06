@@ -24,11 +24,13 @@ public class ShadowController : MonoBehaviour
         foreach (var sl_pair in shadows)
         {
             if (!sl_pair.shadowPivot.gameObject.activeSelf) continue;
+
+            float dist = Vector2.Distance(sl_pair.shadowPivot.transform.position, sl_pair.lightSourceTransform.position);
             Vector2 lightDir = (sl_pair.shadowPivot.position - sl_pair.lightSourceTransform.position).normalized;
             float lightAngle = Mathf.Atan2(lightDir.y, lightDir.x) * Mathf.Rad2Deg;
-            sl_pair.shadowPivot.rotation = Quaternion.Euler(0, 0, lightAngle - 90f);
-
             float newYScale = NewShadowYScale(Vector2.Distance(sl_pair.shadowPivot.transform.position, sl_pair.lightSourceTransform.position));
+            
+            sl_pair.shadowPivot.rotation = Quaternion.Euler(0, 0, lightAngle - 90f);
             sl_pair.shadowPivot.localScale = new(sl_pair.shadowPivot.localScale.x, newYScale);
         }
     }
