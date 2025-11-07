@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: damageDelt
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 4019456379080946922, guid: 8cda49512ff0c1d49860afdfaa1543eb, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5fb7b66850bb6724a86404d089e26fe3, type: 2}
     - target: {fileID: 5487965823033582763, guid: 8cda49512ff0c1d49860afdfaa1543eb, type: 3}
       propertyPath: m_IsActive
       value: 0
